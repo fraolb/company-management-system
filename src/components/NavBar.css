@@ -1,0 +1,14 @@
+.nav{
+    
+    grid-template-rows:  repeat(3, 1fr);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 25rem;
+    gap: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+.link{
+   
+    padding: 2rem;
+}
