@@ -8,7 +8,8 @@ const AdminLogin = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (firstName=="Abebe" && password=="abebe123") {
-          <Link to="/Admin"/>
+          <Link to="/Admin">Logged succesfully</Link>;
+          <Outlet />;
           setFirstName('');
           setPassword('');
         } else {
@@ -18,6 +19,7 @@ const AdminLogin = () => {
   return (
     <>
     <article>
+    <Link to="/Admin" >Click</Link>
       <form className='form' onSubmit={handleSubmit}>
         <div className='form-control'>
           <label htmlFor='firstName'>Name : </label>
@@ -39,8 +41,10 @@ const AdminLogin = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type='submit'>Login</button>
+        {/* <button type='submit'> Login</button> */}
+        <Link {...firstName=="Abebe" && password=="abebe123" ? {to : "/Admin"} : {to:"*"}}>Login</Link>
       </form>
+      
     </article>
   </>
   )
