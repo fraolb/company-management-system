@@ -8,8 +8,6 @@ const AdminLogin = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (firstName=="Abebe" && password=="abebe123") {
-          <Link to="/Admin">Logged succesfully</Link>;
-          <Outlet />;
           setFirstName('');
           setPassword('');
         } else {
@@ -19,7 +17,7 @@ const AdminLogin = () => {
   return (
     <>
     <article>
-    <Link to="/Admin" >Click</Link>
+    
       <form className='form' onSubmit={handleSubmit}>
         <div className='form-control'>
           <label htmlFor='firstName'>Name : </label>
@@ -28,6 +26,7 @@ const AdminLogin = () => {
             id='firstName'
             name='firstName'
             value={firstName}
+            required minLength="4"
             onChange={(e) => setFirstName(e.target.value)}
           />
         </div>
@@ -41,8 +40,12 @@ const AdminLogin = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        {/* <button type='submit'> Login</button> */}
-        <Link {...firstName=="Abebe" && password=="abebe123" ? {to : "/Admin"} : {to:"*"}}>Login</Link>
+        {/* <button className='btn' type='submit' value='Submit'> 
+            <Link  {...firstName=="Abebe" && password=="abebe123" ? {to : "/Admin"} : {to:"/AdminLogin"}}>
+            Login
+            </Link>
+        </button> */}
+        <Link className='btn' value='Submit' type='submit' {...firstName=="Abebe" && password=="abebe123" ? {to : "/Admin"} : {to:"/AdminLogin"}}>Login</Link>
       </form>
       
     </article>
