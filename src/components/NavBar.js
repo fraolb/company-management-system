@@ -4,7 +4,7 @@ import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <>
+    <div className="top_nav">
       <nav className="nav">
         <div>
           <Link classname="link" to="/">
@@ -24,7 +24,7 @@ const NavBar = () => {
       </nav>
 
       <Outlet />
-    </>
+    </div>
   );
 };
 
