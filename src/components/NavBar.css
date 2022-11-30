@@ -1,12 +1,24 @@
+
+.top_nav{
+    border: 0.3rem solid;
+    border-top:none;
+    border-left-color: none;
+    border-right-color: none;
+    border-bottom-color: black;
+    box-shadow: 2rem;
+    padding-bottom: 1rem;
+}
 .nav{
     
     grid-template-rows:  repeat(3, 1fr);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     padding-left: 25rem;
     gap: 2.5rem;
     display: flex;
     align-items: center;
+    border-bottom: 5rem;
+    border-color: aqua;
 }
 .link{
    
